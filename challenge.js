@@ -66,6 +66,18 @@ const students = [{
 
   //punto 5. eliminar un alumnos aleatoriamente de la clase//
 
+  console.log('5.Se elimina un alumno de manera aleatoria. La posicion a eliminar es:')
+
+  const posiciones = [0,1,2,3,4];
+  
+  const pos_aleatorio = Math.floor(Math.random() * posiciones.length);
+  const pos_aleatorios = posiciones[pos_aleatorio];
+
+  console.log(pos_aleatorios)
+
+  removedstudents = students.splice(pos_aleatorios,1)
+
+  console.log(students)
   
   // punto 6. mostrar por consola todos los datos de alumnas//
   const alumnas = students.filter(student => student.gender == 'female')
@@ -77,8 +89,13 @@ const students = [{
   console.log(students.length)
 
   //punto 8. mostrar true o false por consola si todos los alumnos de la clase son chicas//
+  
+  let booleano;
+  if (students.includes({gender:'female'})) {booleano ='true'}
+  else {booleano ='false'}
 
- 
+  console.log('8. Mostrar booleano (T/F) si todos los alumnos son chicas')
+  console.log(booleano)
 
   //punto 9. mostrar por consola los nombres de los alumnso que tengan entre 20 y 25 años//
   
